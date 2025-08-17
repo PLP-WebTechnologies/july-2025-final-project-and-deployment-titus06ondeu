@@ -1,0 +1,81 @@
+/* Import a modern font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #faf7f0;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Header / Hero Section */
+header {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url('images/tsavo-banner.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Section Wrapper */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* Section Headings */
+h2 {
+    color: #d35400;
+    margin-bottom: 15px;
+    border-left: 6px solid #d35400;
+    padding-left: 12px;
+    font-size: 1.8rem;
+}
+h3 {
+    color: #e67e22;
+    margin-top: 25px;
+}
+
+/* Card Style Paragraph Blocks */
+.card {
+    background: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Vision & Mission Special Styling */
+.vision-mission {
+    background: linear-gradient(to right, #ffe0b2, #fff3e0);
+    border-left: 5px solid #e67e22;
+}
+
+/* Map Highlight Section */
+.map-section {
+    background: #fce4ec;
+    border-left: 5px solid #c2185b;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

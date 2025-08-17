@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Parks - Tsavo Conservation Area</title>
+  <link rel="stylesheet" href="our park.css" />
+</head>
+<body>
+  <header class="hero">
+    <h1>Our Parks & Places</h1>
+    <p>Explore the diverse parks, conservancies, and natural wonders of the Tsavo ecosystem.</p>
+  </header>
+
+  <section class="parks">
+    <div class="park"
+         onclick="showDetails('Tsavo East National Park', 'Vast open savannahs, red elephants, the Galana River, Yatta Plateau (world’s longest lava flow), Aruba Dam, Lugard Falls, and Mudanda Rock.')">
+      <img src="images/tsavo east.jpg" alt="Tsavo East National Park" />
+      <div class="park-meta">
+        <h2>Tsavo East National Park</h2>
+        <span class="badge">National Park</span>
+      </div>
+      <p>Iconic red elephants, wide-open plains & dramatic lava landscapes.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Tsavo West National Park', 'Rugged hills, Mzima Springs with hippos & fish, Shetani Lava Flow, Chaimu Crater, Poacher’s Lookout, and Ngulia Rhino Sanctuary.')">
+      <img src="images/tsavo west.jpg" alt="Tsavo West National Park" />
+      <div class="park-meta">
+        <h2>Tsavo West National Park</h2>
+        <span class="badge">National Park</span>
+      </div>
+      <p>Scenic volcanic terrain, springs, and diverse wildlife viewing.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Ngulia Rhino Sanctuary', 'A protected area within Tsavo West dedicated to conserving the critically endangered black rhino with enhanced security and monitoring.')">
+      <img src="images/ngulia rhino sanctuary.jpg" alt="Ngulia Rhino Sanctuary" />
+      <div class="park-meta">
+        <h2>Ngulia Rhino Sanctuary</h2>
+        <span class="badge badge--conservancy">Sanctuary</span>
+      </div>
+      <p>Secure refuge for the black rhino within Tsavo West.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Taita Hills Wildlife Sanctuary', 'Privately managed sanctuary adjoining Tsavo West; rich birdlife, rolling hills, and great game viewing with lodges nearby.')">
+      <img src="images/taita hills sanctuary.jpg" alt="Taita Hills Wildlife Sanctuary" />
+      <div class="park-meta">
+        <h2>Taita Hills Wildlife Sanctuary</h2>
+        <span class="badge badge--conservancy">Sanctuary</span>
+      </div>
+      <p>Lush sanctuary with varied wildlife and bird species.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('LUMO Community Wildlife Sanctuary', 'Community-owned conservancy next to Tsavo West promoting eco-tourism, wildlife corridors, and community livelihoods.')">
+      <img src="images/lumo sanctuary.jpg" alt="LUMO Community Wildlife Sanctuary" />
+      <div class="park-meta">
+        <h2>LUMO Community Wildlife Sanctuary</h2>
+        <span class="badge badge--conservancy">Community Conservancy</span>
+      </div>
+      <p>Community-driven conservation & immersive safari experiences.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Kora National Park', 'Remote, rugged wilderness northeast of Tsavo with rocky inselbergs and the Tana River; linked historically and ecologically to Tsavo.')">
+      <img src="images/kora national park.jpg" alt="Kora National Park" />
+      <div class="park-meta">
+        <h2>Kora National Park</h2>
+        <span class="badge">National Park</span>
+      </div>
+      <p>Untamed landscapes, solitude, and raw beauty.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Chyulu Hills National Park', 'Volcanic hills between Tsavo and Amboseli; emerald slopes, lava tubes like Leviathan Cave, and superb views of Kilimanjaro (weather permitting).')">
+      <img src="images/chyulu hills.jpg" alt="Chyulu Hills National Park" />
+      <div class="park-meta">
+        <h2>Chyulu Hills National Park</h2>
+        <span class="badge">National Park</span>
+      </div>
+      <p>Green volcanic hills & some of the world’s longest lava tubes.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Mzima Springs', 'A series of crystal-clear spring pools in Tsavo West, famous for underwater viewing of hippos and fish through glass observation points.')">
+      <img src="images/mzima springs.jpg" alt="Mzima Springs" />
+      <div class="park-meta">
+        <h2>Mzima Springs</h2>
+        <span class="badge badge--attraction">Attraction</span>
+      </div>
+      <p>Glass-clear waters, hippos & unique underwater viewing.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Shetani Lava Flow', 'A dramatic black lava field near Chyulu Hills formed by relatively recent volcanic activity; striking contrast against surrounding savannah.')">
+      <img src="images/shetani lava.jpg" alt="Shetani Lava Flow" />
+      <div class="park-meta">
+        <h2>Shetani Lava Flow</h2>
+        <span class="badge badge--attraction">Attraction</span>
+      </div>
+      <p>Otherworldly volcanic rockscape shaped by fire.</p>
+    </div>
+
+    <div class="park"
+         onclick="showDetails('Galana River & Lugard Falls', 'Powerful cascades on the Galana River in Tsavo East with sculpted rock formations and panoramic viewpoints.')">
+      <img src="images/lugard falls.jpg" alt="Galana River and Lugard Falls" />
+      <div class="park-meta">
+        <h2>Galana River & Lugard Falls</h2>
+        <span class="badge badge--attraction">Attraction</span>
+      </div>
+      <p>Scenic river gorge and thunderous falls in Tsavo East.</p>
+    </div>
+  </section>
+
+  <!-- Popup (Lightbox) -->
+  <div class="popup" id="popup" aria-hidden="true">
+    <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+      <button class="popup-close" aria-label="Close" onclick="closePopup()">&times;</button>
+      <h3 id="popup-title"></h3>
+      <p id="popup-description"></p>
+    </div>
+  </div>
+
+  <script src="our parks.js"></script>
+</body>
+</html>

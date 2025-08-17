@@ -1,0 +1,304 @@
+body {
+    background-image: url(images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    color: darkgoldenrod;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    text-align: center;
+    font-size: 137px;
+    font-weight: bold;
+    background: transparent;
+}
+
+nav.links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+nav.links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav.links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 5px 10px;
+    transition: 0.3s;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+nav.links a:hover {
+    color: black;
+    border-radius: 5px;
+}
+
+p {
+    font-size: 25px;
+    color: black;
+    padding-left: 50px;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 80vh;
+    background: url('your-hero-image.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    padding: 12px 25px;
+    background-color: #d4a017;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #b58914;
+    transform: scale(1.05);
+}
+
+/* Highlight Cards */
+.highlights {
+    display: flex;
+    gap: 20px;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.highlight-card {
+    flex: 1;
+    background: rgba(255,255,255,0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.highlight-card h3 {
+    margin: 15px 0 10px;
+    color: #d4a017;
+}
+
+/* Image Carousel */
+.image-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    height: 350px;
+    margin: 50px auto 0;
+    perspective: 1200px;       /* a bit more depth */
+    overflow: visible;          /* let side images peek outside */
+}
+
+.carousel img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;                 /* ~80% width as requested */
+    max-width: 900px;
+    height: 300px;
+    border-radius: 10px;
+
+    /* base state (slightly back so sides feel behind) */
+    transform: translate(-50%, -50%) scale(0.9) translateZ(-140px);
+    opacity: 0.55;
+    z-index: 1;
+    transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.carousel img.active {
+    /* fully in front */
+    transform: translate(-50%, -50%) scale(1.05) translateZ(0);
+    opacity: 1;
+    z-index: 3;
+}
+
+.carousel img.next {
+    /* right side: a touch back + slight angle */
+    transform: translate(calc(-50% + 260px), -50%) scale(0.9) rotateY(-10deg) translateZ(-140px);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.carousel img.prev {
+    /* left side: a touch back + slight angle */
+    transform: translate(calc(-50% - 260px), -50%) scale(0.9) rotateY(10deg) translateZ(-140px);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.carousel {
+  position: relative; /* Needed for absolute positioning */
+}
+
+.carousel img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel img.active {
+  transform: translate(-50%, -50%) scale(1.05);
+  opacity: 2.0;
+  z-index: 3;
+}
+
+.carousel img.prev {
+  transform: translate(-150%, -50%) scale(0.9);
+  opacity: 0.3;
+  z-index: 2;
+}
+
+.carousel img.next {
+  transform: translate(50%, -50%) scale(0.9);
+  opacity: 0.3;
+  z-index: 2;
+}
+
+
+/* Default styles are for desktop */
+/* Adjust as screen gets smaller */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  nav.links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  nav.links ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .hero {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .cta-btn {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  nav.links ul {
+    padding: 0;
+  }
+}
